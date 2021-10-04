@@ -41,6 +41,8 @@ for (const TYPE of RANDOM_MAD_LIB.types) {
 } /* for (const TYPE of RANDOM_MAD_LIB.types) */
 
 /* apply the template */
+/* since template literals are static runtime constants,
+ * they need a function wrapper to be compiled dynamically */
 const RESULT = new Function('input', 'return `' + RANDOM_MAD_LIB.template + '`;')(INPUT);
 /* print the result */
 console.log(RESULT);
