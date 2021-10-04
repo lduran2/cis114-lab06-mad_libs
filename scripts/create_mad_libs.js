@@ -1,7 +1,7 @@
 /* all of the mad libs */
 const MAD_LIBS = [
 	{
-		'template': function (input) { return `${input[0]}, ${input[1]}, ${input[2]}, ${input[3]}, ${input[4]}, ${input[5]}`; },
+		'template': '${input[0]}, ${input[1]}, ${input[2]}, ${input[3]}, ${input[4]}, ${input[5]}',
 		'types': [ 'a number', 'a noun', 'an adjective', 'a verb', 'a number', 'a noun' ]
 	}
 ];
@@ -19,6 +19,6 @@ for (const TYPE of RANDOM_MAD_LIB.types) {
 } /* for (const TYPE of RANDOM_MAD_LIB.types) */
 
 /* apply the template */
-const RESULT = RANDOM_MAD_LIB.template(INPUT);
+const RESULT = new Function('input', 'return `' + RANDOM_MAD_LIB.template + '`;')(INPUT);
 /* print the result */
 console.log(RESULT);
