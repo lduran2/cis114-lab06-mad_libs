@@ -1,3 +1,25 @@
+/**
+ * /scripts/create_mad_libs.js
+ * Chooses a random mad lib and applies it to input from the user to
+ * create a very short story.
+ * By        : Leomar Duran <https://github.com/lduran2>
+ * When      : 2021-10-04t18:12
+ * Where     : Community College of Philadelphia
+ * For       : CIS 114/JavaScript I
+ * Version   : 1.1.1
+ *
+ * CHANGELOG :
+ *     v1.1.1 - 2021-10-04t18:12
+ *         refactored function out of templates
+ *         set up changelog
+ *
+ *     v1.1 - 2021-10-04t17:20
+ *         ask for a phrase of each type for that mad lib
+ *
+ *     v1.0 - 2021-10-04t17:12
+ *         created and tested template function
+ */
+
 /* all of the mad libs */
 const MAD_LIBS = [
 	{
