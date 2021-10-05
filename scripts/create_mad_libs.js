@@ -3,12 +3,15 @@
  * Chooses a random mad lib and applies it to input from the user to
  * create a very short story.
  * By        : Leomar Duran <https://github.com/lduran2>
- * When      : 2021-10-04t18:12
+ * When      : 2021-10-04t23:21
  * Where     : Community College of Philadelphia
  * For       : CIS 114/JavaScript I
- * Version   : 1.1.1
+ * Version   : 1.2.0
  *
  * CHANGELOG :
+ *     v1.2.0 - 2021-10-04t23:21
+ *         added the 3 billy goats mad lib
+ *
  *     v1.1.1 - 2021-10-04t18:12
  *         refactored function out of templates
  *         set up changelog
@@ -23,8 +26,8 @@
 /* all of the mad libs */
 const MAD_LIBS = [
 	{
-		'template': '${input[0]}, ${input[1]}, ${input[2]}, ${input[3]}, ${input[4]}, ${input[5]}',
-		'types': [ 'a number', 'a noun', 'an adjective', 'a verb', 'a number', 'a noun' ]
+		'template': 'Once upon a time, there were ${parseInt(input[0], 10) + 2} little ${input[1]}. They protected a ${input[2]} that spans a river ${Math.floor((parseInt(input[3], 10) + 3)*3.28)} feet ${Math.floor((parseInt(input[3], 10) + 3)*39.37) % 12} inches across. One day, a troll wanted to cross the ${input[2]} to ${input[4]}. It was a strong troll, weighing in at ${parseInt(input[5], 10) + 150} lbs.',
+		'types': [ 'a number', 'an animal (plural)', 'a landmark', 'a length [in meters]', 'a fun activity', 'a weight [in lbs]' ]
 	}
 ];
 
