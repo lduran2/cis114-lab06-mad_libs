@@ -3,13 +3,19 @@
  * Chooses a random mad lib and applies it to input from the user to
  * create a very short story.
  * By        : Leomar Duran <https://github.com/lduran2>
- * When      : 2021-10-11t13:15
+ * When      : 2021-10-11t13:37
  * Where     : Community College of Philadelphia
  * For       : CIS 114/JavaScript I
- * Version   : 2.1.0
+ * Version   : 2.1.1
  * Canonical : https://github.com/lduran2/cis114-lab06-mad_libs
  *
  * CHANGELOG :
+ *     v2.1.1 - 2021-10-11t13:37
+ *         types across lines
+ *
+ *     v2.1.0 - 2021-10-11t13:15
+ *         added the nouns object for each mad lib
+ *
  *     v2.1.0 - 2021-10-11t13:15
  *         added the nouns object for each mad lib
  *
@@ -46,7 +52,14 @@ const MAD_LIBS = [
 		rounds: [
 			{
 				template: 'Once upon a time, there were ${parseInt(input[0], 10) + 2} little ${input[1]}. They protected a ${input[2]} that spans a ${nouns.formation} ${Math.floor((parseInt(input[3], 10) + 3)*3.28)} ${nouns.measurements.lengthOut[0]} ${Math.floor((parseInt(input[3], 10) + 3)*39.37) % 12} ${nouns.measurements.lengthOut[1]} across. One ${nouns.timeOfDay}, a ${nouns.being} wanted to cross the ${input[2]} to ${input[4]}. It was a strong ${nouns.being}, weighing in at ${parseInt(input[5], 10) + 150} ${nouns.measurements.weight}.',
-				types: [ 'a number', 'an animal (plural)', 'a landmark', 'a length [in ${nouns.measurements.lengthIn}]', 'a fun activity', 'a weight [in ${nouns.measurements.weight}]' ]
+				types: [
+					'a number',
+					'an animal (plural)',
+					'a landmark',
+					'a length [in ${nouns.measurements.lengthIn}]',
+					'a fun activity',
+					'a weight [in ${nouns.measurements.weight}]'
+				]
 			}
 		]
 	}
